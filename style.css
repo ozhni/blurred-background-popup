@@ -11,6 +11,7 @@ body {
   background-image: url("/img/christian-wiediger-WkfDrhxDMC8-unsplash.jpg");
   background-size: cover;
   text-align: center;
+  transition: filter 0.7s;
 }
 
 h1 {
@@ -21,7 +22,7 @@ h1 {
   text-shadow: 8px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn {
+.open-btn {
   padding: 15px 35px;
   font-size: 16px;
   width: 200px;
@@ -32,12 +33,8 @@ h1 {
   font-weight: bold;
 }
 
-.btn:hover {
+.open-btn:hover {
   filter: brightness(1.2);
-}
-
-.active {
-  filter: blur(4px) brightness(0.7);
 }
 
 .popup-container {
@@ -61,6 +58,8 @@ h1 {
   border: none;
   border-radius: 20px;
   color: aliceblue;
+  opacity: 1;
+  transition: all 0.7s;
 }
 
 .popup-container h4 {
@@ -106,4 +105,18 @@ i {
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+
+i:hover {
+  color: aqua;
+}
+
+.active {
+  filter: blur(4px) brightness(0.5);
+}
+
+.active.popup-container {
+  visibility: hidden;
+  opacity: 0;
+  top: 10%;
 }
